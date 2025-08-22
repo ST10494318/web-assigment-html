@@ -300,3 +300,47 @@ footer {
         width: 200px;
     }
 }
+/* ABOUTE PAGE */
+
+.team{
+  display: flex;
+  gap: 1opx;
+}
+
+.team img{
+  height: 200px;
+  width: 490px;
+  margin-bottom: 0px;
+}
+
+.team p{
+  text-align:center;
+  background-color: #93cdac;
+  margin-bottom: 17px;
+}
+
+.meet img{
+  height: 110px;
+ 
+}
+
+.bar-container {
+  display: flex;
+  align-items: flex-end; /* Align bars to the bottom */
+  height: 200px; /* Set a fixed height for the container */
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+}
+
+.bar {
+  width: 30px; /* Width of each bar */
+  margin: 0 5px; /* Spacing between bars */
+  background-color: steelblue;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
