@@ -1,0 +1,302 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 5%;
+    background-color: #2E8B57; /* Forest green - will blend with most eco logos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav .image img {
+    height: 50px; /* Adjust based on your logo's proportions */
+    width: auto;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    display: flex;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.hero button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero button:hover {
+    background-color: #3CB371;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* About section */
+.abt {
+    padding: 4rem 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.abt .H {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+.abt p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.abt em {
+    color: #2E8B57;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Stats and events container */
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 5%;
+    gap: 2rem;
+}
+
+.stats, .Event {
+    flex: 1;
+    min-width: 300px;
+}
+
+.stats > p, .Event > p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+/* Stats items */
+.stud, .waste, .COMM {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stud:hover, .waste:hover, .COMM:hover {
+    transform: translateY(-5px);
+}
+
+.stud img, .waste img, .COMM img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.stud p:nth-child(2), .waste p:nth-child(2), .COMM p:nth-child(2) {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2E8B57;
+    margin-bottom: 0.5rem;
+}
+
+/* Event items */
+.Communityevent, .Schoolevent, .Generalevent, .General {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Communityevent p:first-of-type, .Schoolevent p:first-of-type, 
+.Generalevent p:first-of-type, .General p:first-of-type {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.Communityevent p:nth-of-type(2), .Schoolevent p:nth-of-type(2), 
+.Generalevent p:nth-of-type(2), .General p:nth-of-type(2) {
+    font-weight: bold;
+    color: #2E8B57;
+    margin-bottom: 0.8rem;
+}
+
+.Communityevent input[type="button"], .Schoolevent input[type="button"], 
+.Generalevent input[type="button"], .General input[type="button"] {
+    padding: 0.5rem 1rem;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Communityevent input[type="button"]:hover, .Schoolevent input[type="button"]:hover, 
+.Generalevent input[type="button"]:hover, .General input[type="button"]:hover {
+    background-color: #3CB371;
+}
+
+/* Footer */
+footer {
+    background-color: #2E8B57;
+    color: white;
+    padding: 2rem 5%;
+}
+
+.ft {
+    text-align: center;
+}
+
+.sub {
+    margin-bottom: 1.5rem;
+}
+
+.sub p {
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+.sub input[type="text"] {
+    padding: 0.7rem;
+    width: 250px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.sub button {
+    padding: 0.7rem 1rem;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sub button:hover {
+    background-color: #FF8C00;
+}
+
+.ft p {
+    margin: 0.5rem 0;
+}
+
+.ft a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    transition: opacity 0.3s ease;
+}
+
+.ft a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav a {
+        margin: 0.2rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        height: 50vh;
+    }
+    
+    .hero button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .Container {
+        flex-direction: column;
+    }
+    
+    .sub input[type="text"] {
+        width: 200px;
+    }
+}
