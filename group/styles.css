@@ -1,0 +1,924 @@
+/* group/styles.css */
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --primary-green: #2E8B57;      /* Sea Green - main brand color */
+    --secondary-green: #3CB371;    /* Medium Sea Green - accents */
+    --light-green: #98FB98;        /* Pale Green - backgrounds */
+    --dark-green: #006400;         /* Dark Green - text and headings */
+    --accent-color: #8FBC8F;       /* Dark Sea Green - secondary elements */
+    --text-color: #333;            /* Main text color */
+    --light-text: #f9f9f9;         /* Light text for dark backgrounds */
+    --background: #f9f9f9;         /* Main background color */
+    --card-bg: #ffffff;            /* Card backgrounds */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Standard shadow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-green);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.nav .image img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav .image img:hover {
+    transform: scale(1.05);
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-green);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav ul li a:hover {
+    background-color: var(--dark-green);
+}
+
+.nav ul li a:hover::after {
+    width: 70%;
+}
+
+/* ===== HERO SECTIONS ===== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.hero > *:not(img) {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 1.8rem;
+    max-width: 80%;
+    margin: 1rem auto;
+}
+
+.hero p:first-of-type {
+    font-size: 2.8rem;
+    font-weight: bold;
+    top: 30%;
+}
+
+.hero p:nth-of-type(2) {
+    top: 45%;
+    font-size: 1.4rem;
+}
+
+.hero button {
+    bottom: 20%;
+    padding: 14px 32px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.hero button:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-3px);
+}
+
+/* ===== HEADINGS ===== */
+.H, h2, h3, .meet p, .get h2, .get h3, .impact p, .con p:first-child {
+    color: var(--dark-green);
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.H::after, h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-green);
+}
+
+h3 {
+    font-size: 1.7rem;
+    margin: 1.5rem 0 1rem;
+}
+
+/* ===== PARAGRAPHS ===== */
+p {
+    margin: 1rem 0;
+    padding: 0 5%;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* ===== ABOUT PAGE SPECIFIC STYLES ===== */
+.statitics {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 250px;
+    margin: 3rem 0;
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.bar {
+    width: 70px;
+    background: linear-gradient(to top, var(--primary-green), var(--secondary-green));
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.bar:hover {
+    transform: translateY(-5px);
+}
+
+.meet {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.meet img {
+    width: 150px;
+    height: auto;
+    margin-top: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 3rem 0;
+    padding: 0 5%;
+}
+
+.team div {
+    text-align: center;
+    width: 220px;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.team div:hover {
+    transform: translateY(-10px);
+}
+
+.team img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.team p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--dark-green);
+    text-align: center;
+    padding: 0;
+}
+
+/* ===== CONTACT PAGE SPECIFIC STYLES ===== */
+.get {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.get h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.get h3 {
+    font-size: 1.7rem;
+    color: var(--secondary-green);
+}
+
+.divs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 5%;
+    margin: 3rem 0;
+}
+
+.divs > div {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.container {
+    width: 100%;
+}
+
+.container label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-green);
+    font-weight: 500;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container textarea,
+.container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container input[type="email"]:focus,
+.container textarea:focus,
+.container select:focus {
+    border-color: var(--primary-green);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(46, 139, 87, 0.2);
+}
+
+.container input[type="submit"] {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.container input[type="submit"]:hover {
+    background-color: var(--dark-green);
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+/* ===== GET INVOLVED PAGE SPECIFIC STYLES ===== */
+.vs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 3rem 0;
+    padding: 0 5%;
+}
+
+.v, .s {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.v:hover, .s:hover {
+    transform: translateY(-5px);
+}
+
+.v p:first-child, .s p:first-child {
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.v p:nth-child(2), .s p:nth-child(2) {
+    color: var(--primary-green);
+    font-size: 1.3rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.v input[type="button"], .s input[type="button"] {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.v input[type="button"]:hover, .s input[type="button"]:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-3px);
+}
+
+.form {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    margin: 3rem 5%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.form p {
+    text-align: center;
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form label {
+    color: var(--dark-green);
+    font-weight: 500;
+}
+
+.form input, .form select {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form input:focus, .form select:focus {
+    border-color: var(--primary-green);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(46, 139, 87, 0.2);
+}
+
+.form button {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: var(--dark-green);
+}
+
+.category {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 0 5%;
+}
+
+.category > div {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category > div:hover {
+    transform: translateY(-8px);
+}
+
+.category p:first-child {
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0;
+}
+
+.category p:nth-child(2) {
+    color: var(--primary-green);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.category button {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.category button:hover {
+    background-color: var(--dark-green);
+}
+
+/* ===== HOME PAGE SPECIFIC STYLES ===== */
+.abt {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    margin: 3rem 5%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.abt p:first-child {
+    text-align: center;
+    color: var(--dark-green);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    font-weight: bold;
+}
+
+.Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 0 5%;
+}
+
+.stats, .Event {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.stats > p, .Event > p {
+    text-align: center;
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.stud, .waste, .COMM, .Communityevent, .Schoolevent, .Generalevent, .General {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stud:hover, .waste:hover, .COMM:hover, 
+.Communityevent:hover, .Schoolevent:hover, 
+.Generalevent:hover, .General:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.stud img, .waste img, .COMM img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    filter: invert(40%) sepia(40%) saturate(1000%) hue-rotate(90deg) brightness(90%) contrast(90%);
+}
+
+.stud p:first-of-type, .waste p:first-of-type, .COMM p:first-of-type {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.stud p:nth-of-type(2), .waste p:nth-of-type(2), .COMM p:nth-of-type(2) {
+    text-align: center;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+.Communityevent p:first-of-type, .Schoolevent p:first-of-type, 
+.Generalevent p:first-of-type, .General p:first-of-type {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.Communityevent p:nth-of-type(2), .Schoolevent p:nth-of-type(2), 
+.Generalevent p:nth-of-type(2), .General p:nth-of-type(2) {
+    color: var(--dark-green);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.Communityevent input[type="button"], .Schoolevent input[type="button"], 
+.Generalevent input[type="button"], .General input[type="button"] {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.Communityevent input[type="button"]:hover, .Schoolevent input[type="button"]:hover, 
+.Generalevent input[type="button"]:hover, .General input[type="button"]:hover {
+    background-color: var(--dark-green);
+}
+
+/* ===== PROGRAMS PAGE SPECIFIC STYLES ===== */
+.scw, .Ccm {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    margin: 3rem 5%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.scw:hover, .Ccm:hover {
+    transform: translateY(-5px);
+}
+
+.scw p:first-child, .Ccm p:first-child {
+    color: var(--dark-green);
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 0;
+}
+
+.scw p:nth-child(2), .Ccm p:nth-child(2) {
+    color: var(--primary-green);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.scw ul, .Ccm ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.scw li, .Ccm li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.scw button, .Ccm button {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.scw button:hover, .Ccm button:hover {
+    background-color: var(--dark-green);
+}
+
+.impact {
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    margin: 3rem 5%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.impact ol {
+    margin-left: 2rem;
+}
+
+.impact li {
+    margin-bottom: 0.8rem;
+    color: var(--primary-green);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.con {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.con input[type="button"] {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.con input[type="button"]:hover {
+    background-color: var(--dark-green);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--dark-green);
+    color: var(--light-text);
+    padding: 3rem 5%;
+    margin-top: auto;
+}
+
+.ft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sub p {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--light-text);
+    font-weight: 500;
+}
+
+.sub input[type="text"] {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.sub button {
+    padding: 12px 24px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.sub button:hover {
+    background-color: var(--secondary-green);
+}
+
+.ft p {
+    text-align: center;
+    margin: 0.5rem 0;
+    color: var(--light-text);
+}
+
+.ft a {
+    color: var(--light-text);
+    margin: 0 0.8rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.ft a:hover {
+    color: var(--light-green);
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav ul li a {
+        margin: 0.2rem;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        height: 400px;
+    }
+    
+    .hero p:first-of-type {
+        font-size: 2rem;
+    }
+    
+    .hero p:nth-of-type(2) {
+        font-size: 1.1rem;
+    }
+    
+    .H, h2, .meet p, .get h2, .get h3, .impact p, .con p:first-child {
+        font-size: 1.8rem;
+    }
+    
+    .divs {
+        flex-direction: column;
+    }
+    
+    .vs {
+        flex-direction: column;
+    }
+    
+    .category {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .category > div {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .Container {
+        flex-direction: column;
+    }
+    
+    .statitics {
+        height: 200px;
+        gap: 15px;
+    }
+    
+    .bar {
+        width: 50px;
+    }
+    
+    .team {
+        gap: 1.5rem;
+    }
+    
+    .team div {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 350px;
+    }
+    
+    .hero p:first-of-type {
+        font-size: 1.7rem;
+    }
+    
+    .hero button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .H, h2, .meet p, .get h2, .get h3, .impact p, .con p:first-child {
+        font-size: 1.6rem;
+    }
+    
+    .sub input[type="text"] {
+        width: 200px;
+    }
+    
+    .statitics {
+        height: 180px;
+        gap: 10px;
+    }
+    
+    .bar {
+        width: 40px;
+        font-size: 0.9rem;
+    }
+}
