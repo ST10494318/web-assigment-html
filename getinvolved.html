@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="group/styles.css">
 </head>
-<body>
 
-  <div class="nav">
-      <div class="image">
-        <img src="images/logo.png" alt="logo">
-      </div>
+<body>
+  <!-- NAV CODE -->
+  <div class="Nav_Container">
+    <div class="image">
+      <img src="images/logo.png" alt="logo">
+    </div>
     <ul>
       <li>
         <a href="index.html">HOME</a>
@@ -22,23 +24,23 @@
       </li>
     </ul>
   </div>
-
+  <!-- Hero sectopn Code -->
   <div class="hero">
     <img src="images/clean1.jpg" alt="hero image">
     <p>Make a Difference Today</p>
     <p>Join our community of changemakers. Your time or support fuels our mission.</p>
   </div>
 
-  <div class="vs">
-    <div class="v">
+  <div class="volunteer_container">
+    <div class="Volun">
       <img src="" alt="">
       <p>Volunteer</p>
       <p>Become a Volunteer</p>
       <p>Join our hands-on projects and education programs. Make a direct impact in your community.</p>
       <input type="button" value="Sign Up Now">
-   </div>
+    </div>
 
-    <div class="s">
+    <div class="Spn">
       <img src="" alt="">
       <p>Donate / Sponsor</p>
       <p>Support Our Cause</p>
@@ -46,32 +48,32 @@
       <input type="button" value="Donate Today">
     </div>
   </div>
+  <!-- sign up sectopn Code -->
+  <div class="form">
+    <p>Volunteer Sign-Up Form</p>
+    <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value=""><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value=""><br>
+      <label for="Email">Email:</label><br>
+      <input type="text" id="Email" name="Email" value=""><br>
+      <label for="options">I'm interested in</label>
 
-    <div class="form">
-      <p>Volunteer Sign-Up Form</p>
-  <form>
-     <label for="fname">First name:</label><br>
-     <input type="text" id="fname" name="fname" value=""><br>
-     <label for="lname">Last name:</label><br>
-     <input type="text" id="lname" name="lname" value=""><br>
-     <label for="Email">Email:</label><br>
-     <input type="text" id="Email" name="Email" value=""><br>
-     <label for="options">I'm interested in</label>
+      <select name="option" id="option">
+        <option value="a">Options</option>
+        <option value="a">Clean-Up Projects</option>
+        <option value="a">School Workshops</option>
+        <option value="a">Both</option>
+      </select>
 
-    <select name="option" id="option">
-      <option value="a">Options</option>
-      <option value="a">Clean-Up Projects</option>
-      <option value="a">School Workshops</option>
-      <option value="a">Both</option>
-    </select>
+      <button>submit</button>
 
-    <button>submit</button>
-
-  </form>
-</div>
-<p style="text-align: center;">Choose Your Impact Level</p>
-<div class="category">
-  
+    </form>
+  </div>
+  <p style="text-align: center;">Choose Your Impact Level</p>
+  <!-- donation sectopn Code -->
+  <div class="category">
     <div>
       <p>Bronze Sponsor</p>
       <p>R500</p>
@@ -96,16 +98,16 @@
       <p>Lorem ipsum</p>
       <button>DONATE</button>
     </div>
-</div>
-
+  </div>
+  <!-- footer sectopn Code -->
   <footer>
     <div class="ft">
       <div class="sub">
-        <p>SUBSCRIBE TO NEWSLETTER</p> 
-         <input type="text">
-         <button>SUBSCRIBE</Button>
+        <p>SUBSCRIBE TO NEWSLETTER</p>
+        <input type="text">
+        <button>SUBSCRIBE</Button>
       </div>
-      
+
       <p>&copy; 2025 Your Company Name. All rights reserved.</p>
       <p>stay in touch</p>
       <a href="https://www.facebook.com/" target="_blank">facebook</a>
@@ -114,4 +116,5 @@
     </div>
   </footer>
 </body>
+
 </html>
